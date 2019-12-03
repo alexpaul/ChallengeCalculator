@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChallengeCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5sx-zn-W7s">
+                                <rect key="frame" x="130.5" y="84" width="153" height="32"/>
+                                <segments>
+                                    <segment title="Elevation"/>
+                                    <segment title="Distance "/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZPC-6j-2IJ"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter metric (e.g elevation, distance challenge)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c9v-OD-WVe">
+                                <rect key="frame" x="20" y="135" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="metric (elevation, distance)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq3-hy-YSP">
+                                <rect key="frame" x="20" y="177" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter number of weeks for challenge" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9be-pe-6qq">
+                                <rect key="frame" x="20" y="218" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number of weeks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng1-6j-gre">
+                                <rect key="frame" x="20" y="260" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVC-v6-u9E">
+                                <rect key="frame" x="138.5" y="321" width="137" height="30"/>
+                                <state key="normal" title="Calculate Challenge"/>
+                                <connections>
+                                    <action selector="calculateChallengePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCC-lV-97q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="average metric for the week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cql-pN-ti0">
+                                <rect key="frame" x="20" y="371" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eVC-v6-u9E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7xp-rd-sAW"/>
+                            <constraint firstItem="c9v-OD-WVe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DOZ-PY-c7h"/>
+                            <constraint firstItem="5sx-zn-W7s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eb5-Av-N7W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cql-pN-ti0" secondAttribute="trailing" constant="20" id="JRv-lw-poI"/>
+                            <constraint firstItem="eVC-v6-u9E" firstAttribute="top" secondItem="ng1-6j-gre" secondAttribute="bottom" constant="40" id="KfB-SI-7Ew"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9be-pe-6qq" secondAttribute="trailing" constant="20" id="Z6C-eW-Skm"/>
+                            <constraint firstItem="9be-pe-6qq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="c6S-ZC-QP7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tq3-hy-YSP" secondAttribute="trailing" constant="20" id="eNG-sS-QSu"/>
+                            <constraint firstItem="5sx-zn-W7s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="h2N-bY-EPV"/>
+                            <constraint firstItem="Tq3-hy-YSP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jLr-Wg-UqC"/>
+                            <constraint firstItem="Cql-pN-ti0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kYU-av-HL6"/>
+                            <constraint firstItem="c9v-OD-WVe" firstAttribute="top" secondItem="5sx-zn-W7s" secondAttribute="bottom" constant="20" id="llM-If-8iW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ng1-6j-gre" secondAttribute="trailing" constant="20" id="lpZ-XU-Ja3"/>
+                            <constraint firstItem="ng1-6j-gre" firstAttribute="top" secondItem="9be-pe-6qq" secondAttribute="bottom" constant="8" id="p5L-nM-rN4"/>
+                            <constraint firstItem="Cql-pN-ti0" firstAttribute="top" secondItem="eVC-v6-u9E" secondAttribute="bottom" constant="20" id="rSK-tJ-EId"/>
+                            <constraint firstItem="ng1-6j-gre" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rrI-tP-wyj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c9v-OD-WVe" secondAttribute="trailing" constant="20" id="uCH-Wp-3If"/>
+                            <constraint firstItem="Tq3-hy-YSP" firstAttribute="top" secondItem="c9v-OD-WVe" secondAttribute="bottom" constant="8" id="wAT-ti-ITh"/>
+                            <constraint firstItem="9be-pe-6qq" firstAttribute="top" secondItem="Tq3-hy-YSP" secondAttribute="bottom" constant="20" id="wJw-8D-dT1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="Cql-pN-ti0" id="ZOX-1p-y1w"/>
+                        <outlet property="metricTextField" destination="c9v-OD-WVe" id="7wm-MG-K7D"/>
+                        <outlet property="numberOfWeeksTextField" destination="9be-pe-6qq" id="1ga-3A-8nA"/>
+                        <outlet property="segmentedControl" destination="5sx-zn-W7s" id="tDj-dw-HKk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+</document>
