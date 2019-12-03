@@ -59,7 +59,19 @@ class ChallengeCalculatorTests: XCTestCase {
     XCTAssertEqual(sutExpectedAverage, weeklyTraining, "\(weeklyTraining) should be equal to \(sutExpectedAverage)")
   }
   
-  // write a test to validate that division by 0 returns -1
+  func testDivisionBy0ReturnsNegativeOne() {
+    // arrange
+    let sut = Challenge()
+    let metric: Double = 11_602
+    let numberOfWeeksForChallenge = 0
+    let expectedOutput = -1
+    
+    // act
+    let sutOutput = sut.calculateWeeklyTraining(for: metric, and: numberOfWeeksForChallenge)
+    
+    // assert
+    XCTAssertEqual(sutOutput, expectedOutput)
+  }
   
   
   // TDD - Test driven developement:
